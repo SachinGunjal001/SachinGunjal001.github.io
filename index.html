@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Gunjal | Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Custom styles to match the design */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0416;
+            color: white;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+        }
+        .purple-text {
+            color: #cd56f8;
+        }
+        .purple-glow {
+             box-shadow: 0 0 20px #cd56f8, 0 0 30px #cd56f8;
+        }
+        .navbar {
+            background: rgba(10, 4, 22, 0.6);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(205, 86, 248, 0.2);
+        }
+        .wave {
+            animation-name: wave-animation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+        @keyframes wave-animation {
+            0% { transform: rotate(0.0deg) }
+            10% { transform: rotate(14.0deg) }
+            20% { transform: rotate(-8.0deg) }
+            30% { transform: rotate(14.0deg) }
+            40% { transform: rotate(-4.0deg) }
+            50% { transform: rotate(10.0deg) }
+            60% { transform: rotate(0.0deg) }
+            100% { transform: rotate(0.0deg) }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .social-icon {
+            transition: all 0.3s ease-in-out;
+        }
+        .social-icon:hover {
+            color: #cd56f8;
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px #cd56f8;
+        }
+        .typewriter-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 2.5rem;
+            background-color: #cd56f8;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        /* Active nav link style */
+        .nav-home {
+             color: #cd56f8;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header / Navigation Bar -->
+    <header class="navbar fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold purple-text">SG</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-home hover:text-purple-400 transition-colors duration-300"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="about.html" class="hover:text-purple-400 transition-colors duration-300"><i class="fas fa-user mr-2"></i>About</a>
+                <a href="projects.html" class="hover:text-purple-400 transition-colors duration-300"><i class="fas fa-project-diagram mr-2"></i>Projects</a>
+                <a href="resume.html" class="hover:text-purple-400 transition-colors duration-300"><i class="fas fa-file-alt mr-2"></i>Resume</a>
+                <a href="#" class="hover:text-purple-400 transition-colors duration-300"><i class="fas fa-blog mr-2"></i>Blogs</a>
+                <a href="#" class="border border-purple-500 rounded-md px-4 py-2 hover:bg-purple-500 hover:text-white transition-all duration-300">
+                    <i class="fas fa-star"></i>
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-90">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Home</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
+            <a href="projects.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Projects</a>
+            <a href="resume.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Resume</a>
+            <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-700">Blogs</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+                <!-- Left Side: Text Content -->
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi There! <span class="wave">👋</span></h1>
+                    <h1 class="text-4xl md:text-5xl font-bold">I'M <span id="typewriter" class="purple-text"></span><span class="typewriter-cursor"></span></h1>
+                </div>
+                <!-- Right Side: Image -->
+                <div class="md:w-1/2">
+<div style="background-color: #0a0416;" class="rounded-full p-2 w-full max-w-md mx-auto">
+    <img src="Img/HomeLogo.svg" alt="Analyst Illustration" class="w-full max-w-md mx-auto float-animation rounded-full" onerror="this.onerror=null;this.src='https://placehold.co/300x300/0a0416/FFFFFF?text=Image+Not+Found';">
+</div>                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section (from original page) -->
+        <section id="about-preview" class="py-20 bg-black bg-opacity-20">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-16">
+                    <!-- Left Side: Text Content -->
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h2 class="text-4xl font-bold mb-8 text-center">LET ME <span class="purple-text">Introduce</span> Myself</h2>
+                        <p class="text-lg mb-4">I fell in love with data, AI and Machine Learning and I have at least learnt something I think... 🤷‍♂️</p>
+                        <p class="text-lg mb-4">I know data Analysis tools <b class="purple-text">PowerBI, Tableau, Excel and Python with SQL.</b></p>
+                        <p class="text-lg mb-4">My field of Interest's are analyzing and findings insights of data with <b class="purple-text">tools and technologies</b> and also in areas related to <b class="purple-text">Machine Learning.</b></p>
+                    </div>
+                    <!-- Right Side: Avatar -->
+                    <div class="md:w-1/3 flex justify-center">
+                        <img src="Img\My Animated Image.PNG" alt="My Avatar" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-purple-500 purple-glow" onerror="this.onerror=null;this.src='https://placehold.co/300x300/1e1b4b/FFFFFF?text=Image+Not+Found';">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- CSS for the Social Icons -->
+<style>
+    .social-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background-color: white;
+        color: #4a00e0; /* Dark purple for the icon */
+        font-size: 1.75rem;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .social-icon:hover {
+        transform: scale(1.1) translateY(-5px);
+        box-shadow: 0 10px 20px rgba(205, 86, 248, 0.4);
+        background-color: #cd56f8;
+        color: white;
+    }
+</style>
+
+<!-- HTML for the "Find me on" Section -->
+<section class="py-16">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4">FIND ME ON</h2>
+        <p class="text-lg text-gray-300 mb-10">Feel free to <span class="purple-text">connect</span> with me</p>
+        <div class="flex justify-center items-center space-x-6">
+            <a href="https://github.com/SachinGunjal001" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/Heisenberg_SG01" target="_blank" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/sachin-gunjal01/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/sachingunjall/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 bg-opacity-80 border-t border-purple-500 border-opacity-20 mt-20">
+        <div class="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm">
+            <p class="mb-4 md:mb-0">Designed and Developed by Sachin Gunjal</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-purple-400"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-purple-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-purple-400"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for the typewriter effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const typewriterElement = document.getElementById('typewriter');
+            const words = ["Sachin Gunjal", "Data Analyst","Data Scientists", "AI Enthusiast ", "A PROBLEM SOLVER"];
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentWord = words[wordIndex];
+                let displayText = '';
+
+                if (isDeleting) {
+                    displayText = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    displayText = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                typewriterElement.textContent = displayText;
+
+                const typeSpeed = isDeleting ? 100 : 200;
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    setTimeout(() => isDeleting = true, 1000);
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                }
+
+                setTimeout(type, typeSpeed);
+            }
+            
+            type();
+
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
