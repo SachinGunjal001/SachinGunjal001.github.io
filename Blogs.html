@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Sachin Gunjal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    /* Header Navigation */
+    header {
+      background: #222;
+      padding: 15px 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ff9800;
+    }
+
+    /* Page Title */
+    main h1 {
+      text-align: center;
+      margin: 40px 0 30px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    /* Blog Section */
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+    }
+    .blog-card h2 {
+      font-size: 18px;
+      margin: 15px;
+      color: #222;
+    }
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .blog-card p {
+      font-size: 14px;
+      color: #555;
+      padding: 0 15px 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .blog-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Blog Section -->
+  <main>
+    <h1>My Blogs</h1>
+    <div class="blog-container">
+
+      <div class="blog-card">
+        <h2>How I Prepared for Data Analyst Interviews</h2>
+        <img src="img/blog1.jpg" alt="Blog 1">
+        <p>This post explains my strategy for preparing SQL, Power BI, and case studies…</p>
+      </div>
+
+      <div class="blog-card">
+        <h2>Trading with ICT Killzones Strategy</h2>
+        <img src="img/blog2.jpg" alt="Blog 2">
+        <p>Here I share my experience with Smart Money Concepts and how I improved emotional control…</p>
+      </div>
+
+      <div class="blog-card">
+        <h2>My 50 KM Marathon Journey</h2>
+        <img src="img/blog3.jpg" alt="Blog 3">
+        <p>A detailed story of my marathon training, challenges, and how I achieved my 50KM goal…</p>
+      </div>
+
+      <div class="blog-card">
+        <h2>Switching Careers into Data Analytics</h2>
+        <img src="img/blog4.jpg" alt="Blog 4">
+        <p>I share my journey from IT support into analytics and the skills I built along the way…</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sachin Gunjal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
