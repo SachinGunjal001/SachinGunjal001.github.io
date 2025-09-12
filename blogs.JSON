@@ -1,0 +1,13 @@
+{
+  "blogs": [
+    {
+      "url": "https://your-blog-platform.com/mastering-css-grid",
+      "id": "blog1"
+    },
+    {
+      "url": "https://your-blog-platform.com/javascript-closures",
+      "id": "blog2"
+    }
+    // Add more blog URLs as needed
+  ]
+}
