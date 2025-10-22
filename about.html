@@ -100,7 +100,90 @@
             </div>
         </section>
 
-        <iframe title="report1" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=f3e400a6-51b6-48b2-b185-209f80a04bd3&autoAuth=true&ctid=93f33571-550f-43cf-b09f-cd331338d086" frameborder="0" allowFullScreen="true"></iframe>
+ 
+              <style>
+                body {
+                  margin: 0;
+                  font-family: "Poppins", sans-serif;
+                  background-color: #0b0716;
+                  color: #fff;
+                  background-image: radial-gradient(circle at 20% 20%, #1b1030 0%, #0b0716 100%);
+                  min-height: 100vh;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                }
+            
+                /* Section Container */
+                .powerbi-container {
+                  text-align: center;
+                  margin: 60px auto;
+                  color: #fff;
+                  max-width: 1200px;
+                  padding: 20px;
+                  border-radius: 20px;
+                }
+            
+                /* Title Styling */
+                .section-title {
+                  font-size: 1.9rem;
+                  background: linear-gradient(90deg, #b57eff, #8a4fff);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  font-weight: 600;
+                  letter-spacing: 0.5px;
+                  text-shadow: 0 0 12px rgba(160, 100, 255, 0.5);
+                  margin-bottom: 25px;
+                }
+            
+                /* Frame Container */
+                .powerbi-frame {
+                  position: relative;
+                  overflow: hidden;
+                  padding-top: 56.25%; /* 16:9 ratio */
+                  border-radius: 20px;
+                  box-shadow: 0px 0px 25px rgba(173, 109, 255, 0.2),
+                              0px 0px 60px rgba(100, 50, 200, 0.15);
+                  background: rgba(255, 255, 255, 0.05);
+                  backdrop-filter: blur(8px);
+                  border: 1px solid rgba(190, 120, 255, 0.2);
+                }
+            
+                .powerbi-frame iframe {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                  border-radius: 20px;
+                }
+            
+                /* Responsive tweak */
+                @media (max-width: 768px) {
+                  .section-title {
+                    font-size: 1.5rem;
+                  }
+                  .powerbi-container {
+                    margin: 40px 10px;
+                  }
+                }
+              </style>
+            </head>
+            <body>
+              <section id="powerbi-dashboard" class="powerbi-container">
+                <h2 class="section-title">Pune Air Quality Today</h2>
+                <div class="powerbi-frame">
+                  <iframe 
+                    title="Real-Time Air Quality Dashboard"
+                    src="https://app.powerbi.com/reportEmbed?reportId=f3e400a6-51b6-48b2-b185-209f80a04bd3&autoAuth=true&ctid=93f33571-550f-43cf-b09f-cd331338d086"
+                    allowFullScreen="true">
+                  </iframe>
+                </div>
+              </section>
+            </body>
+            </html>
 
         <section class="container mx-auto px-6 py-16">
             <h2 class="text-4xl font-bold text-center mb-12">Professional <span class="purple-text">Skillset</span></h2>
@@ -319,6 +402,7 @@
     </script>
 </body>
 </html>
+
 
 
 
